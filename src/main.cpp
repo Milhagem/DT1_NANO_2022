@@ -73,7 +73,6 @@ volatile int conta_motor = LOW;
 
 void setup()
 {
-  Serial.begin(9600);
   tempo_atual = 0;
   contagem_roda = 0;
   tempo_anterior_roda = 0;
@@ -139,7 +138,6 @@ void valor_sensor()
   double valorShunt = 0.001;
   double fatorCorrecaoV = 1.01626;
   double fatorCorrecaoC = 0.482625;
-  Serial.println(fatorCorrecaoV);
 
   rawVoltage = INA.getBusMilliVolts();
   tensao_bat_INA = (float)rawVoltage * ((R5 + R6) / R6) * fatorCorrecaoV * fatorMili; // Esse valor que está sendo multiplicado pelo valor da tensão tem a função de calibrar o sensor.
