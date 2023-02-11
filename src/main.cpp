@@ -203,7 +203,7 @@ void calculo_velocidade()
  */
 void datalogger()
 {
-  if ((millis() - tempo_escrita) > 10)
+  if ((millis() - tempo_escrita) > 100)
   {
     myFile.print(tensao_bat_INA);
     myFile.print(',');
